@@ -13,6 +13,7 @@
 
 ```bash
 $ yarn fmt
+$ yarn tsc
 ```
 
 ## ライセンス
