@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
 
-export const MainStackScreen: React.VFC = () => {
+export const MainStackNavigation: React.VFC = () => {
   return <View></View>
 }
