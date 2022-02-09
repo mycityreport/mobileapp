@@ -1,3 +1,3 @@
-type MainStackNavigationProps = {
+export type MainStackNavigationProps = {
   mainScreen: undefined
 }
