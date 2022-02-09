@@ -1,0 +1,3 @@
+type MainStackNavigationProps = {
+  mainScreen: undefined
+}
