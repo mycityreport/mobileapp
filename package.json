@@ -15,12 +15,18 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.5.0",
     "expo": "~44.0.0",
     "expo-status-bar": "~1.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
-    "react-native-web": "0.17.1"
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-native-web": "0.17.1",
+    "recoil": "^0.6.1",
+    "twrnc": "^3.0.2-beta.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -28,6 +34,7 @@
     "@types/react-native": "~0.64.12",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eas-cli": "^0.47.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
