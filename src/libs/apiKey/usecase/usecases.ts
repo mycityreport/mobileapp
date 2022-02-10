@@ -1,5 +1,5 @@
 import { ApiKey } from '../models/apiKey'
-import { ApiKeyDAO } from './apiKeyDAO'
+import { ApiKeyDAO } from './apiKeyDTO'
 import { ApiKeyRepository } from './apiKeyRepository'
 
 export function getApiKeyUseCase(
