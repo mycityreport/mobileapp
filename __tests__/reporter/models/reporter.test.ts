@@ -7,5 +7,7 @@ describe('Reporter model', () => {
     const reporterID = ReporterID.of(1)
     const nickName = NickName.of('example')
     const reporter = new Reporter(reporterID, nickName)
+    expect(reporter.id).toEqual(reporterID.value)
+    expect(reporter.nickname).toEqual(nickName.value)
   })
 })
