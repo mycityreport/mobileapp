@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { ExpoConfig } from '@expo/config-types'
 
 type Props = { config: ExpoConfig }
