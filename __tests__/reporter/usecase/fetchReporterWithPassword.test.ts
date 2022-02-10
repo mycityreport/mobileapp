@@ -1,10 +1,10 @@
-import { fetchReporterFromPasswordUseCase } from '@libs/reporter/usecase/usecases'
+import { fetchReporterWithPasswordUseCase } from '@libs/reporter/usecase/usecases'
 import { InMemoryReporterClient } from './InMemoryReporterClient'
 
 describe('Reporter usecases', () => {
   it('fetch reporter with password', async () => {
     const client = new InMemoryReporterClient()
-    const fetchReporterWithPassword = fetchReporterFromPasswordUseCase(client)
+    const fetchReporterWithPassword = fetchReporterWithPasswordUseCase(client)
 
     const username = 'example'
     const password = 'password'
@@ -16,7 +16,7 @@ describe('Reporter usecases', () => {
 
   it('empty username', () => {
     const client = new InMemoryReporterClient()
-    const fetchReporterWithPassword = fetchReporterFromPasswordUseCase(client)
+    const fetchReporterWithPassword = fetchReporterWithPasswordUseCase(client)
 
     const username = ''
     const password = 'password'
@@ -28,7 +28,7 @@ describe('Reporter usecases', () => {
 
   it('empty password', () => {
     const client = new InMemoryReporterClient()
-    const fetchReporterWithPassword = fetchReporterFromPasswordUseCase(client)
+    const fetchReporterWithPassword = fetchReporterWithPasswordUseCase(client)
 
     const username = 'example'
     const password = ''
@@ -40,7 +40,7 @@ describe('Reporter usecases', () => {
 
   it('invalid password', () => {
     const client = new InMemoryReporterClient()
-    const fetchReporterWithPassword = fetchReporterFromPasswordUseCase(client)
+    const fetchReporterWithPassword = fetchReporterWithPasswordUseCase(client)
 
     const username = 'example'
     const password = 'example'
