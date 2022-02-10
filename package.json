@@ -8,11 +8,18 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint --ext .tsx,.ts src/ && prettier --check src/**/*",
-    "fmt": "prettier --write src/**/*"
+    "fmt": "prettier --write src/**/*",
+    "test": "jest"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ]
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.8",
