@@ -7,8 +7,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint --ext .tsx,.ts src/ && prettier --check src/**/*",
-    "fmt": "prettier --write src/**/*",
+    "lint": "eslint --ext .tsx,.ts src/ __tests__/ && prettier --check src/**/* __tests__/**/*",
+    "fmt": "prettier --write src/**/* __tests__/**/*",
     "test": "jest"
   },
   "prettier": {
