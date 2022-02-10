@@ -1,13 +1,13 @@
 import { ApiKey } from '../models/apiKey'
-import { ApiKeyDAO } from './apiKeyDTO'
+import { ApiKeyDTO } from './apiKeyDTO'
 import { ApiKeyRepository } from './apiKeyRepository'
 
 export function getApiKeyUseCase(
   repository: ApiKeyRepository
-): () => Promise<ApiKeyDAO> {
+): () => Promise<ApiKeyDTO> {
   return async () => {
     const storedApiKey = await repository.getApiKey()
-    return storedApiKey.value as ApiKeyDAO
+    return ApiKeyDTO.fromApiKey(storedApiKey)
   }
 }
 
