@@ -1,6 +1,5 @@
 export class ApiKey {
-  private readonly _apiKeyBrand = undefined
-  public readonly value: string
+  private readonly _value: string
 
   public static of(value: string): ApiKey {
     return new ApiKey(value)
@@ -11,12 +10,16 @@ export class ApiKey {
       throw new Error('Invalid API key length')
     }
 
-    const apiKeyPattern = /([0-9]|[a-f]){40}/
+    const apiKeyPattern = /^([0-9]|[a-f]){40}$/
 
     if (apiKeyPattern.exec(value) === null) {
       throw new Error('Invalid API key format')
     }
 
-    this.value = value
+    this._value = value
+  }
+
+  public get value(): string {
+    return this._value
   }
 }
