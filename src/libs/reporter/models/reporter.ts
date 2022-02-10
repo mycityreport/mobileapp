@@ -2,8 +2,8 @@ import { NickName } from './nickname'
 import { ReporterID } from './reporterID'
 
 export class Reporter {
-  private _id: ReporterID
-  private _nickname: NickName
+  private readonly _id: ReporterID
+  private readonly _nickname: NickName
 
   constructor(id: ReporterID, nickname: NickName) {
     this._id = id
