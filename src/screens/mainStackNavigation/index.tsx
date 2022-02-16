@@ -24,7 +24,9 @@ export const MainStackNavigation: React.VFC<MainStackNavigationProps> = ({
       </Stack.Screen>
       <Stack.Screen name="LoginScreen">{() => <LoginScreen />}</Stack.Screen>
       <Stack.Screen name="SignUpScreen">{() => <SignUpScreen />}</Stack.Screen>
-      <Stack.Screen name="HomeScreen">{() => <HomeScreen />}</Stack.Screen>
+      <Stack.Screen name="HomeScreen" options={{ headerShown: false }}>
+        {() => <HomeScreen />}
+      </Stack.Screen>
     </Stack.Navigator>
   )
 }
