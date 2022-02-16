@@ -6,17 +6,17 @@ import {
 import { selector } from 'recoil'
 import { apiKeyRepository } from './apiKeyRepository'
 
-export const getApiKey = selector({
+export const getApiKeyInstance = selector({
   key: 'getApiKeyUseCase',
   get: ({ get }) => getApiKeyUseCase(get(apiKeyRepository)),
 })
 
-export const saveApiKey = selector({
+export const saveApiKeyInstance = selector({
   key: 'saveApiKeyUseCase',
   get: ({ get }) => saveApiKeyUseCase(get(apiKeyRepository)),
 })
 
-export const deleteApiKey = selector({
+export const deleteApiKeyInstance = selector({
   key: 'deleteApiKeyUseCase',
   get: ({ get }) => deleteApiKeyUseCase(get(apiKeyRepository)),
 })
