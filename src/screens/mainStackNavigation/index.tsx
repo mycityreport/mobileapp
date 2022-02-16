@@ -9,9 +9,17 @@ import { MainStackParamList } from './navigationProps'
 
 const Stack = createNativeStackNavigator<MainStackParamList>()
 
-export const MainStackNavigation: React.VFC = () => {
+type MainStackNavigationProps = {
+  isAuthenticated: boolean
+}
+
+export const MainStackNavigation: React.VFC<MainStackNavigationProps> = ({
+  isAuthenticated,
+}) => {
   return (
-    <Stack.Navigator initialRouteName="OnboardingScreen">
+    <Stack.Navigator
+      initialRouteName={isAuthenticated ? 'HomeScreen' : 'OnboardingScreen'}
+    >
       <Stack.Screen name="MainScreen">{() => <MainScreen />}</Stack.Screen>
       <Stack.Screen name="OnboardingScreen" options={{ headerShown: false }}>
         {() => <OnboardingScreen />}
