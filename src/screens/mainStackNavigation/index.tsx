@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { HomeScreen } from '@screens/homeScreen'
 import { LoginScreen } from '@screens/loginScreen'
 import { MainScreen } from '@screens/mainScreen'
 import { OnboardingScreen } from '@screens/onboardingScreen'
@@ -17,6 +18,7 @@ export const MainStackNavigation: React.VFC = () => {
       </Stack.Screen>
       <Stack.Screen name="LoginScreen">{() => <LoginScreen />}</Stack.Screen>
       <Stack.Screen name="SignUpScreen">{() => <SignUpScreen />}</Stack.Screen>
+      <Stack.Screen name="HomeScreen">{() => <HomeScreen />}</Stack.Screen>
     </Stack.Navigator>
   )
 }
