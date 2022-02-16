@@ -1,7 +1,6 @@
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 export type MainStackParamList = {
-  MainScreen: undefined
   OnboardingScreen: undefined
   LoginScreen: undefined
   SignUpScreen: undefined

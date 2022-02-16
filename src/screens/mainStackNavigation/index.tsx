@@ -1,7 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { HomeScreen } from '@screens/homeScreen'
 import { LoginScreen } from '@screens/loginScreen'
-import { MainScreen } from '@screens/mainScreen'
 import { OnboardingScreen } from '@screens/onboardingScreen'
 import { SignUpScreen } from '@screens/signUpScreen'
 import React from 'react'
@@ -20,7 +19,6 @@ export const MainStackNavigation: React.VFC<MainStackNavigationProps> = ({
     <Stack.Navigator
       initialRouteName={isAuthenticated ? 'HomeScreen' : 'OnboardingScreen'}
     >
-      <Stack.Screen name="MainScreen">{() => <MainScreen />}</Stack.Screen>
       <Stack.Screen name="OnboardingScreen" options={{ headerShown: false }}>
         {() => <OnboardingScreen />}
       </Stack.Screen>
