@@ -1,6 +1,7 @@
 import React from 'react'
-import { Button, SafeAreaView, View } from 'react-native'
+import { SafeAreaView, View } from 'react-native'
 import tw from 'twrnc'
+import { ContinueAsGuestButton } from './components/continueAsGuestButton'
 import { LoginButton } from './components/loginButton'
 import { SignUpButton } from './components/signUpButton'
 
@@ -14,12 +15,7 @@ export const OnboardingScreen: React.VFC = () => {
           <SignUpButton />
         </View>
         <View>
-          <Button
-            title="Continue as guest"
-            onPress={() => {
-              console.log('continue as a guest')
-            }}
-          />
+          <ContinueAsGuestButton />
         </View>
       </View>
     </SafeAreaView>
