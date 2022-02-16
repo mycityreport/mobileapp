@@ -2,7 +2,7 @@ import { fetchReporterWithPasswordUseCase } from '@libs/reporter/usecase/usecase
 import { selector } from 'recoil'
 import { reporterClient } from './reporterClient'
 
-export const fetchReporterWithPassword = selector({
+export const fetchReporterWithPasswordInstance = selector({
   key: 'FetchReporterWithPasswordUseCase',
   get: ({ get }) => fetchReporterWithPasswordUseCase(get(reporterClient)),
 })
