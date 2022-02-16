@@ -7,6 +7,11 @@ export type MainStackParamList = {
   HomeScreen: undefined
 }
 
+export type OnboardingScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'OnboardingScreen'
+>
+
 export type LoginScreenNavigationProp = NativeStackNavigationProp<
   MainStackParamList,
   'LoginScreen'
