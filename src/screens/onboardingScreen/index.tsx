@@ -14,7 +14,12 @@ export const OnboardingScreen: React.VFC = () => {
           <SignUpButton />
         </View>
         <View>
-          <Button title="Continue as guest" onPress={() => {}} />
+          <Button
+            title="Continue as guest"
+            onPress={() => {
+              console.log('continue as a guest')
+            }}
+          />
         </View>
       </View>
     </SafeAreaView>
