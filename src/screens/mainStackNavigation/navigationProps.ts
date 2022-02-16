@@ -23,7 +23,7 @@ export type SignUpScreenNavigationProp = NativeStackNavigationProp<
   'SignUpScreen'
 >
 
-export type HomeScreenNavigationprop = NativeStackNavigationProp<
+export type HomeScreenNavigationProp = NativeStackNavigationProp<
   MainStackParamList,
   'HomeScreen'
 >

@@ -2,7 +2,7 @@ import { saveApiKeyInstance } from '@libs/apiKey/infrastructure/react/atoms/apiK
 import { fetchReporterWithPasswordInstance } from '@libs/reporter/infrastructure/react/atoms/fetchReporterWithPasswordUseCase'
 import { reporterState } from '@libs/reporter/infrastructure/react/atoms/reporter'
 import { CommonActions, useNavigation } from '@react-navigation/native'
-import { HomeScreenNavigationprop } from '@screens/mainStackNavigation/navigationProps'
+import { HomeScreenNavigationProp } from '@screens/mainStackNavigation/navigationProps'
 import React, { useCallback } from 'react'
 import { Button } from 'react-native'
 import { useSetRecoilState, useRecoilValue } from 'recoil'
@@ -32,7 +32,7 @@ export const LoginButton: React.VFC<LoginButtonProps> = ({
     [fetchReporterWithPassword, saveApiKey, setReporter]
   )
 
-  const navigation = useNavigation<HomeScreenNavigationprop>()
+  const navigation = useNavigation<HomeScreenNavigationProp>()
 
   const onPress = useCallback(async () => {
     await login(email, password)
