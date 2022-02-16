@@ -1,4 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { ForgetPasswordScreen } from '@screens/forgetPasswordScreen'
 import { HomeScreen } from '@screens/homeScreen'
 import { LoginScreen } from '@screens/loginScreen'
 import { OnboardingScreen } from '@screens/onboardingScreen'
@@ -26,6 +27,9 @@ export const MainStackNavigation: React.VFC<MainStackNavigationProps> = ({
       <Stack.Screen name="SignUpScreen">{() => <SignUpScreen />}</Stack.Screen>
       <Stack.Screen name="HomeScreen" options={{ headerShown: false }}>
         {() => <HomeScreen />}
+      </Stack.Screen>
+      <Stack.Screen name="ForgetPasswordScreen">
+        {() => <ForgetPasswordScreen />}
       </Stack.Screen>
     </Stack.Navigator>
   )

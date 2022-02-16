@@ -5,6 +5,7 @@ export type MainStackParamList = {
   LoginScreen: undefined
   SignUpScreen: undefined
   HomeScreen: undefined
+  ForgetPasswordScreen: undefined
 }
 
 export type OnboardingScreenNavigationProp = NativeStackNavigationProp<
@@ -25,4 +26,9 @@ export type SignUpScreenNavigationProp = NativeStackNavigationProp<
 export type HomeScreenNavigationprop = NativeStackNavigationProp<
   MainStackParamList,
   'HomeScreen'
+>
+
+export type ForgetPasswordScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'ForgetPasswordScreen'
 >
