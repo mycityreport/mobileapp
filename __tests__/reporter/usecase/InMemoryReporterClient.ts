@@ -18,8 +18,9 @@ export class InMemoryReporterClient implements ReporterClient {
 
     const id = ReporterID.of(1)
     const nickname = NickName.of(username)
+    const apikey = ApiKey.of('d012ded50105308c87f1b595f9c34b3ed3d078e1')
 
-    return new Reporter(id, nickname)
+    return new Reporter(id, nickname, apikey)
   }
 
   public async fetchWithApiKey(apiKey: ApiKey): Promise<Reporter> {
@@ -32,6 +33,6 @@ export class InMemoryReporterClient implements ReporterClient {
     const id = ReporterID.of(1)
     const nickname = NickName.of('example')
 
-    return new Reporter(id, nickname)
+    return new Reporter(id, nickname, apiKey)
   }
 }

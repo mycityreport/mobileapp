@@ -12,6 +12,7 @@ describe('Reporter usecases', () => {
 
     expect(fetchedReporter.id).toEqual(1)
     expect(fetchedReporter.nickname).toEqual('example')
+    expect(fetchedReporter.apiKey).toEqual(apiKey.value)
   })
 
   it('invalid api key', () => {

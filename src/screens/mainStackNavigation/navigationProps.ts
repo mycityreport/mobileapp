@@ -1,3 +1,34 @@
-export type MainStackNavigationProps = {
-  mainScreen: undefined
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
+
+export type MainStackParamList = {
+  OnboardingScreen: undefined
+  LoginScreen: undefined
+  SignUpScreen: undefined
+  HomeScreen: undefined
+  ForgetPasswordScreen: undefined
 }
+
+export type OnboardingScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'OnboardingScreen'
+>
+
+export type LoginScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'LoginScreen'
+>
+
+export type SignUpScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'SignUpScreen'
+>
+
+export type HomeScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'HomeScreen'
+>
+
+export type ForgetPasswordScreenNavigationProp = NativeStackNavigationProp<
+  MainStackParamList,
+  'ForgetPasswordScreen'
+>

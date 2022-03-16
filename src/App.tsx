@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import AppLoading from 'expo-app-loading'
 import { StatusBar } from 'expo-status-bar'
 import { NavigationContainer } from '@react-navigation/native'
-import { MainStackNavigation } from '@screens/mainStackNavigation'
 import { RecoilRoot } from 'recoil'
+import { InitScreen } from '@screens/initScreen'
 
 export const App: React.VFC = () => {
   return (
     <RecoilRoot>
       <NavigationContainer>
-        <MainStackNavigation />
+        <Suspense fallback={<AppLoading />}>
+          <InitScreen />
+        </Suspense>
         <StatusBar style="auto" />
       </NavigationContainer>
     </RecoilRoot>

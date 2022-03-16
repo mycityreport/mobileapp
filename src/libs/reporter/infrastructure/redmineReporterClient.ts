@@ -57,7 +57,8 @@ export class RedmineReporterClient implements ReporterClient {
 
     const id = ReporterID.of(user.id)
     const nickname = NickName.of(user.displayname)
+    const apiKey = ApiKey.of(user.api_key)
 
-    return new Reporter(id, nickname)
+    return new Reporter(id, nickname, apiKey)
   }
 }
