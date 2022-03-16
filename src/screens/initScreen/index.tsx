@@ -1,16 +1,10 @@
 import { MainStackNavigation } from '@screens/mainStackNavigation'
 import React from 'react'
-import { useIsAuthenticated } from './hooks/useIsAuthenticated'
-import AppLoading from 'expo-app-loading'
-import { useIsLoading } from './hooks/useIsLoading'
+import { isAuthenticated } from './hooks/useIsAuthenticated'
+import { useRecoilValue } from 'recoil'
 
 export const InitScreen: React.VFC = () => {
-  const { isLoading } = useIsLoading()
-  const { isAuthenticated } = useIsAuthenticated()
+  const authenticated = useRecoilValue(isAuthenticated)
 
-  if (isLoading) {
-    return <AppLoading />
-  }
-
-  return <MainStackNavigation isAuthenticated={isAuthenticated} />
+  return <MainStackNavigation isAuthenticated={authenticated} />
 }
