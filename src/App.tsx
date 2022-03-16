@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import AppLoading from 'expo-app-loading'
 import { StatusBar } from 'expo-status-bar'
 import { NavigationContainer } from '@react-navigation/native'
 import { RecoilRoot } from 'recoil'
@@ -8,7 +9,9 @@ export const App: React.VFC = () => {
   return (
     <RecoilRoot>
       <NavigationContainer>
-        <InitScreen />
+        <Suspense fallback={<AppLoading />}>
+          <InitScreen />
+        </Suspense>
         <StatusBar style="auto" />
       </NavigationContainer>
     </RecoilRoot>
